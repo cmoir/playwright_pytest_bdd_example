@@ -10,4 +10,5 @@ def verify_header(page: Page):
 
 
 def select_more_information_link(page: Page):
-    page.click(more_info_link)
+    with page.expect_navigation():
+        page.click(more_info_link)
