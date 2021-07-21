@@ -5,8 +5,7 @@ header: str = 'h1'
 more_info_link: str = 'text=More information'
 
 
-# load check
-def check_header(page: Page):
+def verify_header(page: Page):
     assert page.inner_text(header) == 'Example Domain'
 
 

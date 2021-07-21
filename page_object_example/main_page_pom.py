@@ -9,8 +9,7 @@ class MainPage:
     header: str = 'h1'
     more_info_link: str = 'text=More information'
 
-    #load check
-    def check_header(self):
+    def verifiy_header(self):
         assert self.page.inner_text(self.header) == 'Example Domain'
 
     def select_more_information_link(self):
