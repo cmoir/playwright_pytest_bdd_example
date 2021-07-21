@@ -4,11 +4,11 @@ class MainPage:
 
     #web Elements
     header: str = 'h1'
-    more_info_link:str = 'More information'
+    more_info_link: str = 'text=More information'
 
-    #load condition
+    #load check
     def check_header(self):
-        assert self.page.inner_text('h1') == 'Example Domain'
+        assert self.page.inner_text(self.header) == 'Example Domain'
 
     def select_more_information_link(self):
-        self.page.click("text=More information")
+        self.page.click(self.page.more_info_link)
