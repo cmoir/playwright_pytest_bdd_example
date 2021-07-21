@@ -14,4 +14,4 @@ class MainPage:
         assert self.page.inner_text(self.header) == 'Example Domain'
 
     def select_more_information_link(self):
-        self.page.click(self.page.more_info_link)
+        self.page.click(self.more_info_link)
