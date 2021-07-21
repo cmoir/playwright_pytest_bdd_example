@@ -1,4 +1,4 @@
-from pages_object_example.main_page import MainPage
+from page_object_example.main_page_pom import MainPage
 
 
 def test_example_is_working(page):
