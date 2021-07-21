@@ -16,19 +16,23 @@ This test is using a standard page object model, where the selectors
 and functions are inside a class.
 
 ```python
+from playwright.sync_api import Page
+
+
 class MainPage:
     def __init__(self, page: Page):
         self.page = page
 
-    #web Elements
+    #HTML Elements
     header: str = 'h1'
     more_info_link: str = 'text=More information'
 
-    def verify_header(self):
+    def verifiy_header(self):
         assert self.page.inner_text(self.header) == 'Example Domain'
 
     def select_more_information_link(self):
-        self.page.click(self.more_info_link)
+        with self.page.expect_navigation():
+            self.page.click(self.more_info_link)
 ```
 
 ## Page File example
@@ -36,6 +40,9 @@ This test is using the same concept but using files to group the pages without t
 This simpler implementation that works just as well and is easier to implement.
 
 ```python
+from playwright.sync_api import Page
+
+#HTML Elements
 header: str = 'h1'
 more_info_link: str = 'text=More information'
 
@@ -45,5 +52,6 @@ def verify_header(page: Page):
 
 
 def select_more_information_link(page: Page):
-    page.click(more_info_link)
+    with page.expect_navigation():
+        page.click(more_info_link)
 ```

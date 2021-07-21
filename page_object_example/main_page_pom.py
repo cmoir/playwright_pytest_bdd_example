@@ -5,7 +5,7 @@ class MainPage:
     def __init__(self, page: Page):
         self.page = page
 
-    #web Elements
+    #HTML Elements
     header: str = 'h1'
     more_info_link: str = 'text=More information'
 
