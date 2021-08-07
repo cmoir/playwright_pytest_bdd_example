@@ -1,5 +1,5 @@
-from page_object_example.main_page_pom import MainPage
-from page_object_example.ican_navigation import IcanNavigationMenu
+from pages.main_page import MainPage
+from pages.ican_navigation import IcanNavigationMenu
 
 def test_example_is_working(page):
     main_page = MainPage(page)
