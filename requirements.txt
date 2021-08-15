@@ -1,2 +1,4 @@
 playwright~=1.13.1
 pytest~=6.2.4
+pytest-playwright~=0.1.2
+pytest-bdd~=4.1.0

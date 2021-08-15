@@ -1,6 +1,7 @@
-## Playwright Python Page Oject Example Poject
+## Playwright Python pytest_bdd example
 - Depends on [pytest-playwright](https://github.com/microsoft/playwright-pytest) 
 - pip install pytest-playwright
+- pip install pytest-bdd
 - install playwright
 
 ## Playwright Documentation
