@@ -2,7 +2,7 @@
 - Depends on [pytest-playwright](https://github.com/microsoft/playwright-pytest) 
 - pip install pytest-playwright
 - pip install pytest-bdd
-- install playwright
+- playwright install
 
 ## Playwright Documentation
 
