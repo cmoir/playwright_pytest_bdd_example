@@ -4,6 +4,13 @@
 - pip install pytest-bdd
 - playwright install
 
+## Command Line Example
+Use "pytest" to run all the tests
+
+Other examples
+Use "pytest tests/test_without_bdd.py" to run all the tests in the test_without_bdd module
+Use "pytest tests/test_without_bdd.py::test_select_numbers_link" to run the test_select_numbers_link test
+
 ## Playwright Documentation
 
 [https://playwright.dev/python/docs/intro](https://playwright.dev/python/docs/intro)
