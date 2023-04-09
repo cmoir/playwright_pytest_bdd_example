@@ -2,33 +2,33 @@ from playwright.sync_api import Page
 
 
 class IcanNavigationMenu:
+    DOMAIN_LINK = 'text=Domains'
+    NUMBERS_LINK = 'text=Numbers'
+    PROTOCOLS_LINK = 'text=Protocols'
+    ABOUT_US_LINK = 'text=About Us'
+
     def __init__(self, page: Page):
         self.page = page
 
-    #Web Elements
-    domains: str = "text=Domains"
-    numbers: str = "text=Numbers"
-    protocols: str = "text=Protocols"
-    about_us: str = "text=About Us"
+    def verify_menu_links(self):
+        self.page.wait_for_selector(self.DOMAIN_LINK)
+        self.page.wait_for_selector(self.NUMBERS_LINK)
+        self.page.wait_for_selector(self.PROTOCOLS_LINK)
+        self.page.wait_for_selector(self.ABOUT_US_LINK)
 
-    def verify_menu_items(self):
-        self.page.wait_for_selector(self.domains)
-        self.page.wait_for_selector(self.numbers)
-        self.page.wait_for_selector(self.protocols)
-        self.page.wait_for_selector(self.about_us)
-
-    def select_domains_link(self):
+    def click_domain_link(self):
         with self.page.expect_navigation():
-            self.page.click(self.domains)
+            self.page.click(self.DOMAIN_LINK)
 
-    def select_numbers_link(self):
+    def click_numbers_link(self):
         with self.page.expect_navigation():
-            self.page.click(self.numbers)
+            self.page.click(self.NUMBERS_LINK)
 
-    def select_protocols_link(self):
+    def click_protocols_link(self):
         with self.page.expect_navigation():
-            self.page.click(self.protocols)
+            self.page.click(self.PROTOCOLS_LINK)
 
-    def select_about_us_link(self):
+    def click_about_us_link(self):
         with self.page.expect_navigation():
-            self.page.click(self.about_us)
+            self.page.click(self.ABOUT_US_LINK)
+
